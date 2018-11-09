@@ -1,0 +1,43 @@
+@import '../../styles/base/variable';
+@import '../../styles/tools/functions';
+.header {
+  background: #fff;
+  width: 100%;
+
+  .header-bar {
+    height: vw(50);
+    line-height: vw(50);
+    position: relative;
+
+    .logo {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      float: left;
+      height: vw(50);
+      width: vw(36);
+      background: url(logo.png) no-repeat left center;
+      background-size: vw(36) vw(36);
+    }
+
+    .app-name-wrap {
+      text-align: center;
+      width: 100%;
+    }
+    .app-name {
+      font-size: vw(15);
+      background: url(icon_eth.png) no-repeat left center;
+      padding-left: vw(32);
+      background-clip: border-box;
+      background-size: vw(32) vw(32);
+      display: inline-block;
+    }
+  }
+
+  .header-title {
+    font-family: 'SFProText-Medium';
+    text-align: center;
+    line-height: vw(40);
+  }
+}

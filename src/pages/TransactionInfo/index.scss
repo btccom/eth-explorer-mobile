@@ -1,0 +1,35 @@
+@import '../../styles/tools/functions';
+.tab-container{
+  margin-top:vw(24);
+}
+.detail-container{
+  margin-bottom:vw(38);
+}
+.simple-list-item-container{
+  margin-top:vw(5);
+  margin-bottom:vw(5);
+  font-size: vw(14);
+  line-height: vw(22);
+ 
+  .width45{
+    display: inline-block;
+    width:45%;
+  }
+  color:#666;
+  overflow-x: hidden;
+  .internal-list-row,.token-list-row{
+    display: flex;
+    justify-content: space-between;
+    padding-top:vw(3);
+    padding-bottom:vw(3);
+
+    .address-item{
+     width:vw(120)
+    }
+  }
+}
+
+.other-blockchain{
+  font-size: vw(14);
+  color:rgba(0,0,0,.65)
+}

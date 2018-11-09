@@ -1,0 +1,36 @@
+@import './variable';
+@import '../tools/functions';
+.am-search{
+  background-color: #fff;
+  padding:0;
+
+  .am-search-input{
+    height: 35px;
+    background-color: #f5f5f5;
+    input[type="search"]{
+      height: 35px;
+    }
+
+    .am-search-synthetic-ph{
+      height: 35px;
+      line-height: 35px;
+    }
+    .am-search-synthetic-ph-icon{
+      background-image: url(icon_search.png)
+    }
+    .am-search-clear{
+      height: vw(21);
+    }
+  }
+  .am-search-cancel{
+    color:#333;
+  }
+}
+
+.am-tabs-default-bar-underline{
+  transform: scaleX(0.7)
+}
+
+.am-tabs-default-bar-tab{
+  font-size:vw(16)
+}

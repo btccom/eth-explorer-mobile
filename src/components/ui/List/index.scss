@@ -1,0 +1,31 @@
+@import '../../../styles/tools/functions';
+.list-container{
+  .list-row{
+    padding:vw(14) 0 vw(13) 0;
+
+    .list-row-simple{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .list-row-content {
+      margin-top: vw(8)
+    }
+
+
+    .list-row-title{
+      display: inline-block;
+      color:#333;
+      font-size: vw(18);
+      // font-weight: 500
+    }
+
+    .list-value-text{
+      font-size: vw(16);
+      color:#666;
+      word-break: break-word;
+      line-height: vw(28)
+    }
+
+  }
+}

@@ -1,0 +1,38 @@
+.warning-page {
+  margin-top: 50px;
+  text-align: center;
+
+  .notfound-bg {
+    width: 218px;
+    height: 194px;
+    margin: 0 auto;
+    //background: url(img_404.png) center center no-repeat;
+    background-size: 218px 194px;
+  }
+
+  .servererror-bg {
+    width: 272px;
+    height: 116px;
+    margin: 0 auto;
+    //background: url(img_500.png) center center no-repeat;
+    background-size: 272px 116px;
+  }
+
+  .noresult-bg {
+    width: 166px;
+    height: 149px;
+    margin: 0 auto;
+    background: url(img_no_result.png) center center no-repeat;
+    background-size: 166px 149px;
+  }
+
+  .warning-tip {
+    line-height: 60px;
+  }
+
+  .ant-btn{
+    width:74px;
+    text-align: center;
+    padding:0;
+  }
+}

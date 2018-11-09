@@ -1,0 +1,12 @@
+// Functions
+
+// iPhone 6 尺寸作为设计稿基准
+// Covert pixels to vw
+@function vw($px) {
+  @return ($px/375) *100vw;
+}
+
+// Convert pixels to rems
+@function remy($value, $base: 1px) {
+  @return ($value / $base) * 1rem;
+}

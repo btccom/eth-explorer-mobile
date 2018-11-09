@@ -1,0 +1,67 @@
+@import '../../../styles/base/variable';
+.chunk{
+  width:100%;
+  display: inline-block;
+  height:100%;
+  border-radius: 4px;
+  background-clip:border-box;
+  &.chunk-primary{
+    color:#fff;
+    background: linear-gradient(270deg,$gradientlStart 0%,$gradientlEnd 100%);
+    box-shadow:0px 0px 4px 0px $gradientlStart;
+    * {
+      color:#fff;
+    }
+  }
+  
+  &.chunk-secondary{
+    color:rgba(0,0,0,0.65);
+    background: rgba(0,0,0,0.05);
+    * {
+      color:rgba(0,0,0,0.65);
+    }
+  }
+  
+  &.chunk-tertiary{
+    color:rgba(0,0,0,0.65);
+    background: rgba(107,203,255,0.05);
+    border:1px solid rgba(55,172,246,1);
+    * {
+      color:rgba(0,0,0,0.65);
+    }
+  }
+
+  &.chunk-success{
+    width:auto;
+    padding: 0 6px;
+    color:#52C41A;
+    background: #F6FFED;
+    border:1px solid #B7EB8F;
+    * {
+      color:#52C41A;
+    }
+  }
+
+  &.chunk-fail{
+    width:auto;
+    padding: 0 6px;
+    color:#F5222D;
+    background: #FFF1F0;
+    border:1px solid #FFA39E;
+    * {
+      color:#F5222D;
+    }
+  }
+
+  &.chunk-pending{
+    width:auto;
+    padding: 0 6px;
+    color:#FA541C;
+    background: #FFF2E8;
+    border:1px solid #FFBB96;
+    * {
+      color:#FA541C;
+    }
+  }
+  
+}
