@@ -1,5 +1,5 @@
 {
-  "name": "react-mobx-antd-intl-btc-boilerplate",
+  "name": "eth-explorer-mobile",
   "version": "1.0.0",
   "description": "### Technology stack",
   "main": "src/index.js",
@@ -61,6 +61,7 @@
   },
   "dependencies": {
     "@sentry/browser": "^4.2.3",
+    "antd": "^3.11.2",
     "antd-mobile": "^2.2.6",
     "axios": "^0.18.0",
     "bignumber.js": "^7.2.1",
