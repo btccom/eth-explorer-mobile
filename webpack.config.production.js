@@ -144,13 +144,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: false,
       template: './index.html'
-    }),
-    new CopyWebpackPlugin([
-      {
-        from: path.resolve(__dirname, './static'),
-        to: './static',
-        ignore: ['.*']
-      }
-    ])
+    })
+    // new CopyWebpackPlugin([
+    //   {
+    //     from: path.resolve(__dirname, './static'),
+    //     to: './static',
+    //     ignore: ['.*']
+    //   }
+    // ])
   ]
 };
