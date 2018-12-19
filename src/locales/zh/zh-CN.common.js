@@ -17,7 +17,8 @@ const commonMessage = {
     },
     notFoundTip: '对不起，您当前访问的页面不存在',
     serverErrorTip: '对不起, 服务器出错',
-    noResultTip: '对不起, 您要查询的数据不存在'
+    noResultTip: '对不起, 您要查询的数据不存在',
+    noData: '暂无数据'
   }
 };
 const commonMessageFlatten = flatten(commonMessage);

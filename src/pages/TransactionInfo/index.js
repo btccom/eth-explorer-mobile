@@ -51,6 +51,27 @@ export default class TransactionInfo extends Component {
       { title: <Ts transKey="pages.txns.internalTxns" /> }
     ];
 
+    const otherRows = [
+      {
+        key: 'otherExplorers',
+        title: <Ts transKey="pages.txns.otherExplorers" />,
+        isValueWrap: true,
+        render: () => {
+          return (
+            <div>
+              <a
+                className="other-blockchain"
+                href="https://etherscan.io/"
+                target="_blank"
+              >
+                <i className="inline-icon blockchain-ex-icon" /> ETHERSCAN
+              </a>
+            </div>
+          );
+        }
+      }
+    ];
+
     return (
       <PageWrap loading={loading}>
         <div className="page-container txinfo-container">

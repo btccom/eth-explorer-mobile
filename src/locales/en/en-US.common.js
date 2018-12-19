@@ -17,7 +17,8 @@ const commonMessage = {
     },
     notFoundTip: 'Sorry, the page you are looking for does not exist',
     serverErrorTip: 'Sorry, server error',
-    noResultTip: 'Sorry, no search results'
+    noResultTip: 'Sorry, no search results',
+    noData: 'No data'
   }
 };
 const commonMessageFlatten = flatten(commonMessage);

@@ -67,8 +67,12 @@ export default class InternalTxList extends Component {
 
   getInternalList = () => {
     const { dataSource } = this.props;
-    if (!dataSource) {
-      return null;
+    if (!dataSource || dataSource.length === 0) {
+      return (
+        <p className="no-data-tip">
+          <Ts transKey="common.noData" />
+        </p>
+      );
     }
     return dataSource.map(item => <InternalListItem {...item} key={item.id} />);
   };

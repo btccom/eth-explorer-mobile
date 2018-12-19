@@ -352,7 +352,7 @@ export default class TransactionDetail extends Component {
                 href="https://etherscan.io/"
                 target="_blank"
               >
-                <i className="inline-icon blockchain-ex-icon" /> ETHERSCAN
+                <i className="inline-icon blockchain-ex-icon" /> BLOCKCHAIR
               </a>
             </div>
           );
