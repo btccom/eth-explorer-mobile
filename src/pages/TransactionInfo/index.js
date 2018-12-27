@@ -47,8 +47,8 @@ export default class TransactionInfo extends Component {
 
     const tabs = [
       { title: <Ts transKey="pages.txns.transactionDetail" /> },
-      { title: <Ts transKey="pages.txns.tokenTransfer" /> },
-      { title: <Ts transKey="pages.txns.internalTxns" /> }
+      { title: <Ts transKey="pages.txns.internalTxns" /> },
+      { title: <Ts transKey="pages.txns.tokenTransfer" /> }
     ];
 
     const otherRows = [
@@ -61,7 +61,9 @@ export default class TransactionInfo extends Component {
             <div>
               <a
                 className="other-blockchain"
-                href="https://etherscan.io/"
+                href={`https://blockchair.com/ethereum/transaction/${
+                  txInfo.tx_hash
+                }`}
                 target="_blank"
               >
                 <i className="inline-icon blockchain-ex-icon" /> ETHERSCAN
@@ -95,10 +97,10 @@ export default class TransactionInfo extends Component {
             >
               <TransactionDetail />
               <WingBlank>
-                <TokenTransfer dataSource={tokenTransferList} />
+                <InternalTxList dataSource={internalTxList} />
               </WingBlank>
               <WingBlank>
-                <InternalTxList dataSource={internalTxList} />
+                <TokenTransfer dataSource={tokenTransferList} />
               </WingBlank>
             </Tabs>
           </div>

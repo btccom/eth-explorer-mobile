@@ -28,7 +28,7 @@ export default class Demo extends Component {
             marginTop: 40
           }}
         >
-          请输入要搜索的交易Hash
+          <Ts transKey="pages.txns.inputSearchTip" />
         </h2>
       </div>
     );

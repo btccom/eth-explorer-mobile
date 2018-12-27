@@ -58,7 +58,6 @@ class TransactionInfoStore {
 
   @action
   setCurrentTab = tab => {
-    console.log(tab);
     this.currentTab = tab;
   };
 
@@ -94,7 +93,7 @@ class TransactionInfoStore {
     const res = await ajax.get(`/tx/internal/${txHash}`);
     if (res && res.data) {
       runInAction(() => {
-        this.internalTxList = res.data.list.slice(0, 5);
+        this.internalTxList = res.data.list;
         this.internalTotalCount = res.data.list.length;
       });
     }
@@ -105,12 +104,12 @@ class TransactionInfoStore {
     const res = await ajax.get(`/tx/token/${txHash}`, {
       params: {
         page: 1,
-        size: 5
+        size: 500
       }
     });
     if (res && res.data) {
       runInAction(() => {
-        this.tokenTransferList = res.data.list.slice(0, 5);
+        this.tokenTransferList = res.data.list;
         this.tokenTransferTotalCount = res.data.total_count;
       });
     }

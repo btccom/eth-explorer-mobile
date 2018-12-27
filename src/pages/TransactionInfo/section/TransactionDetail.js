@@ -99,6 +99,7 @@ export default class TransactionDetail extends Component {
       {
         key: 'txStatus',
         title: <Ts transKey="pages.txns.txStatus" />,
+        isShow: !!txStatus,
         render: () => {
           return (
             <Chunk
@@ -113,6 +114,7 @@ export default class TransactionDetail extends Component {
       {
         key: 'block',
         title: <Ts transKey="pages.txns.block" />,
+        isShow: !this.isPending(txStatus),
         render: () => {
           return (
             <span>
@@ -225,7 +227,7 @@ export default class TransactionDetail extends Component {
           return (
             <div>
               <TokenTransfer
-                dataSource={tokenTransferList}
+                dataSource={tokenTransferList.slice(0, 5)}
                 tokenTransferTotalCount={tokenTransferTotalCount}
               />
               {tokenTransferTotalCount > 5 && (
@@ -349,7 +351,9 @@ export default class TransactionDetail extends Component {
             <div>
               <a
                 className="other-blockchain"
-                href="https://etherscan.io/"
+                href={`https://blockchair.com/ethereum/transaction/${
+                  txInfo.tx_hash
+                }`}
                 target="_blank"
               >
                 <i className="inline-icon blockchain-ex-icon" /> BLOCKCHAIR

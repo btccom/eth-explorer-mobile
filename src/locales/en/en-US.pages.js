@@ -11,6 +11,7 @@ const pageMessage = {
     },
 
     txns: {
+      inputSearchTip: 'Please Input Transaction Hash to Search',
       totalTransaction: 'Total {txnsCount} Transactions',
       totalTransactionMaxLimit: ' (Display the last {count}+ records only)',
       txHash: 'TxHash',

@@ -11,6 +11,7 @@ const pageMesage = {
     },
 
     txns: {
+      inputSearchTip: '请输入要搜索的交易Hash',
       totalTransaction: '总计{txnsCount}个交易',
       totalTransactionMaxLimit: ' (仅显示最近{count}+条数据)',
       txHash: '交易哈希',

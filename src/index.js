@@ -57,7 +57,6 @@ const renderApp = Component => {
             history={history}
             onUpdate={() => {
               window.scrollTo(0, 0);
-              console.log('--ga--', window.location.hash);
               //fireTracking();
               //ReactGA.pageview(window.location.hash);
             }}
