@@ -22,7 +22,7 @@ module.exports = {
     disableHostCheck: true,
     proxy: {
       '/api/**': {
-        target: 'https://explorer-web.api.btc.com/v1/eth/',
+        target: 'http://13.250.10.117:17001/v1/eth/',
         pathRewrite: { '^/api': '' },
         //secure: false,
         logLevel: 'debug',

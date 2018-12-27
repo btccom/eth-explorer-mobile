@@ -90,7 +90,12 @@ class TransactionInfoStore {
 
   @action
   getInternalTxList = async txHash => {
-    const res = await ajax.get(`/tx/internal/${txHash}`);
+    const res = await ajax.get(`/tx/internal/${txHash}`, {
+      params: {
+        nested: false,
+        limit: 500
+      }
+    });
     if (res && res.data) {
       runInAction(() => {
         this.internalTxList = res.data.list;

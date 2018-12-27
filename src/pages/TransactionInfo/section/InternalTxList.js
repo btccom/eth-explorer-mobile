@@ -13,7 +13,7 @@ const getDisplayStatusCls = ({ error }) => {
 };
 
 const InternalListItem = ({
-  tx_type,
+  trace_address,
   amount,
   sender_type,
   sender_hash,
@@ -26,7 +26,7 @@ const InternalListItem = ({
     <div className="simple-list-item-container">
       <div className="internal-list-row with-icon-left">
         <i className={`cell-icon ${getDisplayStatusCls({ status, error })}`} />
-        <span className="width45 text-left">{tx_type}</span>
+        <span className="width45 text-left">{trace_address}</span>
         <div className="width45 text-right">
           <span className="minor-text">
             <Ts transKey="pages.txns.transfer" />
