@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, HashRouter } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 import { Provider } from 'mobx-react';
 import { AppContainer } from 'react-hot-loader';
 import { RouterStore, syncHistoryWithStore } from 'mobx-react-router';
@@ -53,7 +53,7 @@ const renderApp = Component => {
       <Provider store={stores} routing={routeStore}>
         <IntlProviderWrap>
           {/* react router key props for fixing dev bug it should remove when deployed */}
-          <HashRouter
+          <Router
             history={history}
             onUpdate={() => {
               window.scrollTo(0, 0);
@@ -63,7 +63,7 @@ const renderApp = Component => {
             key={Math.random()}
           >
             <App />
-          </HashRouter>
+          </Router>
         </IntlProviderWrap>
       </Provider>
     </AppContainer>,

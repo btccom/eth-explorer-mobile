@@ -51,7 +51,8 @@ const pageMessage = {
       tokenTransfered: 'Tokens Transfered',
       txTokenTransferedCount: '{count} ERC-20 transfers found,  ',
       internalTotalCountMaxLimit: '{count} internal transactions found,  ',
-      otherExplorers: 'Other blockchain explorers'
+      otherExplorers: 'Other blockchain explorers',
+      errorInfo: 'Error Info'
     }
   }
 };

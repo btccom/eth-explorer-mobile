@@ -219,6 +219,28 @@ export default class TransactionDetail extends Component {
         }
       },
       {
+        key: 'errorinfo',
+        isValueWrap: false,
+        title: <Ts transKey="pages.txns.errorInfo" />,
+        render: () => {
+          return (
+            <div>
+              <i className="expand-icon" />
+              <span
+                className={`bold ${
+                  this.getDisplayStatus(txInfo) === 'fail'
+                    ? 'error-text'
+                    : 'warning-text'
+                }`}
+                style={{ verticalAlign: 'top', marginLeft: 15 }}
+              >
+                {txInfo.error}
+              </span>
+            </div>
+          );
+        }
+      },
+      {
         key: 'tokenTransfered',
         isValueWrap: true,
         title: <Ts transKey="pages.txns.tokenTransfered" />,

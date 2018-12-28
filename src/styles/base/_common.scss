@@ -22,6 +22,18 @@ h4 {
 .text-left {
   text-align: left;
 }
+.success-text {
+  color: $successColor;
+}
+
+.warning-text {
+  color: $warningColor;
+}
+
+.error-text {
+  color: $errorColor;
+}
+
 .minor-text{
   color:#999;
   font-size: vw(12);

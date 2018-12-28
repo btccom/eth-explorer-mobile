@@ -51,7 +51,8 @@ const pageMesage = {
       tokenTransfered: '代币转账',
       txTokenTransferedCount: '共{count}笔 ERC-20 代币转账， ',
       internalTotalCountMaxLimit: '共{count}笔内部转账， ',
-      otherExplorers: '其他区块链浏览器'
+      otherExplorers: '其他区块链浏览器',
+      errorInfo: '错误信息'
     }
   }
 };
