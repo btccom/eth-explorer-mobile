@@ -11,7 +11,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    publicPath: 'https://eth-pre.btc.com/',
+    publicPath: 'https://m-eth-pre.btc.com/',
     filename: 'assets/[name].[hash].js',
     chunkFilename: 'assets/[name].[chunkhash].js'
   },
