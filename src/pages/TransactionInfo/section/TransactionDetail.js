@@ -204,7 +204,7 @@ export default class TransactionDetail extends Component {
                       <span
                         className="link"
                         onClick={() => {
-                          this.handleClickView(2);
+                          this.handleClickView(1);
                         }}
                       >
                         <Ts transKey="common.viewAll" />
@@ -221,6 +221,7 @@ export default class TransactionDetail extends Component {
       {
         key: 'errorinfo',
         isValueWrap: false,
+        isShow: this.getDisplayStatus(txInfo) === 'fail',
         title: <Ts transKey="pages.txns.errorInfo" />,
         render: () => {
           return (
@@ -263,7 +264,7 @@ export default class TransactionDetail extends Component {
                   <span
                     className="link"
                     onClick={() => {
-                      this.handleClickView(1);
+                      this.handleClickView(2);
                     }}
                   >
                     <Ts transKey="common.viewAll" />
