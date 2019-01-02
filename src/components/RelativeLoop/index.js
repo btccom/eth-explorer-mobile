@@ -18,6 +18,12 @@ class RelativeLoop extends Component {
     });
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      currentSecond: nextProps.second - 0
+    });
+  }
+
   componentWillUnmount() {
     clearInterval(this.state.intervalId);
   }
