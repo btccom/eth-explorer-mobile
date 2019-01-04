@@ -16,7 +16,7 @@ import App from './App';
 import('./styles/main.scss');
 
 //Unique Google Analytics tracking number
-//ReactGA.initialize('UA-66176065-33');
+ReactGA.initialize('UA-66176065-33');
 
 // init datetime format
 dateFormat();
@@ -26,27 +26,27 @@ const renderApp = Component => {
   const routeStore = new RouterStore();
   const history = syncHistoryWithStore(browserHistory, routeStore);
 
-  // if (typeof history.listen === 'function' && isProduction) {
-  //   history.listen(location => {
-  //     let firstLevel = location.pathname;
-  //     let secondaryLevel = location.hash;
-  //     let splitArr = location.hash.split('/');
-  //     if (splitArr.length > 2) {
-  //       secondaryLevel = splitArr[0] + '/' + splitArr[1];
-  //     }
-  //     let fullPath = firstLevel + secondaryLevel;
-  //     // Google Analatics
-  //     if (window.ga) {
-  //       window.ga('set', 'page', fullPath);
-  //       window.ga('send', 'pageview', fullPath);
-  //     }
+  if (typeof history.listen === 'function' && isProduction) {
+    history.listen(location => {
+      let firstLevel = location.pathname;
+      let secondaryLevel = location.hash;
+      let splitArr = location.hash.split('/');
+      if (splitArr.length > 2) {
+        secondaryLevel = splitArr[0] + '/' + splitArr[1];
+      }
+      let fullPath = firstLevel + secondaryLevel;
+      // Google Analatics
+      if (window.ga) {
+        window.ga('set', 'page', fullPath);
+        window.ga('send', 'pageview', fullPath);
+      }
 
-  //     // Baidu Tongji
-  //     if (_hmt) {
-  //       _hmt.push(['_trackPageview', fullPath]);
-  //     }
-  //   });
-  // }
+      // Baidu Tongji
+      if (_hmt) {
+        _hmt.push(['_trackPageview', fullPath]);
+      }
+    });
+  }
 
   render(
     <AppContainer>
