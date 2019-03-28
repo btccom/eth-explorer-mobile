@@ -27,8 +27,8 @@ npm install
 ### Usage
 
 #### Start project on local server 
-#### Set host: 127.0.0.1 local.btcfe.com
-#### (go to : http://local.btcfe.com:8083)
+#### Set host: 127.0.0.1 m.ethbtc.com
+#### (go to : http://m.ethbtc.com:8085)
 
 ```
 yarn run dev

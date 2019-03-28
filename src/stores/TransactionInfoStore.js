@@ -67,7 +67,7 @@ class TransactionInfoStore {
       this.loading = true;
     }
 
-    const res = await ajax.get(`/tx/${txHash}`);
+    const res = await ajax.get(`/txns/${txHash}`);
     this.loading = false;
     if (res && res.data) {
       runInAction(() => {
@@ -90,7 +90,7 @@ class TransactionInfoStore {
 
   @action
   getInternalTxList = async txHash => {
-    const res = await ajax.get(`/tx/internal/${txHash}`, {
+    const res = await ajax.get(`/internaltxns/${txHash}`, {
       params: {
         nested: false,
         limit: 500
@@ -106,7 +106,7 @@ class TransactionInfoStore {
 
   @action
   getTokenTransferList = async txHash => {
-    const res = await ajax.get(`/tx/token/${txHash}`, {
+    const res = await ajax.get(`/tokentxns/${txHash}`, {
       params: {
         page: 1,
         size: 500
